@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .header {
+      width: 100%;
+      height: 70px;
+      background-color: grey;
+      padding: 0 20px;
+    }
+    .header h2 {
+      line-height: 70px; /*imp*/
+      text-transform: uppercase;
+      float: left;
+      color: white;
+    }
+    .header .menu {
+      list-style-type: none;
+      float: right;
+    }
+    .menu li {
+      display: inline-block;
+      line-height: 70px;
+    }
+    .menu li a {
+      text-decoration: none;
+      font-size: 20px;
+      color: white;
+      text-transform: uppercase;
+      padding: 0 20px;
+      transition: 0.4s;
+    }
+    .menu li a:hover,
+    .show-btn:hover,
+    .hide-btn:hover {
+      color: skyblue;
+    }
+    .show-btn,
+    .hide-btn {
+      font-size: 30px;
+      color: white;
+      line-height: 70px;
+      transition: 0.4s;
+      display: none;
+    }
+    .show-btn {
+      float: right;
+    }
+    #chk {
+      position: absolute;
+      z-index: -1;
+    }
+
+    @media screen and (max-width: 800px) {
+      .show-btn,
+      .hide-btn {
+        display: block;
+      }
+
+      .menu {
+        position: fixed;
+        top: 0;
+        /* slider-effect */
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: #333;
+        text-align: center;
+        padding: 80px 0;
+        transition: 0.7s;
+        line-height: normal;
+      }
+      #chk:checked ~ .menu {
+        /*select all the element next to it when checked*/
+        right: 0;
+      }
+      .menu li {
+        display: block;
+      }
+      .menu li a {
+        display: block;
+      }
+      .hide-btn {
+        position: absolute;
+        right: 20px;
+        top: 8px;
+      }
+    }
+    .ankur {
+      background-image: linear-gradient(to right bottom, grey, white);
+      height: 50vh;
+      width: 100%;
+    }
+    .content {
+      letter-spacing: 2px;
+      text-indent: 50px;
+      line-height: 1.4;
+      text-shadow: 2px 2px rgb(231, 228, 228);
+      margin: 5px;      
+    }
+  </style>
+  <body>
+    <div class="header">
+      <h2>Ankur Gupta</h2>
+      <!-- for toggle we use checkbox -->
+      <input type="checkbox" id="chk" />
+      <label for="chk" class="show-btn">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+
+        <label for="chk" class="hide-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </label>
+      </ul>
+    </div>
+    <div class="ankur"></div>
+    <div class="content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ad
+      obcaecati recusandae ipsum veniam dolore voluptatibus blanditiis dolores
+      voluptas corrupti? Velit ea nesciunt mollitia sequi architecto at deleniti
+      consectetur sit molestias, ut doloribus repellendus aliquid doloremque
+      tempore quam, modi dolore possimus fugit dolores enim et voluptas facilis
+      magnam? Reprehenderit deleniti totam consequuntur? Laborum laboriosam quod
+      ratione expedita possimus, consequatur ducimus debitis voluptas! Aliquid,
+      cumque. Consequatur neque ab quasi laudantium! Libero distinctio alias
+      quis, eius sit, magnam quos facilis illo tempore voluptatem expedita
+      maxime fugit molestiae odio quisquam, officiis dolor itaque dolorum
+      ducimus debitis. Sapiente nostrum dolorum unde recusandae. Soluta possimus
+      dolore incidunt nobis sed eius nam totam, est, beatae blanditiis neque
+      deserunt laudantium optio nostrum doloremque autem minima aspernatur sint
+      odio dignissimos voluptate voluptas! Unde porro soluta eos consequuntur
+      praesentium rem molestiae reprehenderit cupiditate dignissimos, suscipit
+      sequi eveniet doloremque possimus enim fugit maiores qui quidem, libero
+      expedita illo. Quas ut inventore corrupti, unde molestias est obcaecati
+      minima nisi aliquam odio distinctio pariatur quo tenetur laboriosam enim
+      incidunt nobis eius magni quidem consequuntur libero facilis hic dolore!
+      Veniam sequi magnam minima nihil. Eaque, veritatis! Odio suscipit nisi
+      enim. Eveniet impedit error quibusdam alias, quo aspernatur quod rem
+      adipisci officiis earum qui ea cum est. Praesentium molestias optio
+      repudiandae dolor mollitia quos soluta corrupti consectetur hic neque
+      vitae atque eum voluptas nihil dignissimos ipsum iste delectus laboriosam,
+      deserunt deleniti quaerat, aliquid voluptatem veritatis nulla.
+      Perspiciatis vitae cupiditate dolor rerum quas quo et aliquam hic aliquid
+      quos mollitia, quidem maiores tenetur placeat eligendi adipisci modi
+      distinctio possimus, incidunt laudantium perferendis maxime ullam
+      nesciunt. Perspiciatis temporibus alias quibusdam labore doloribus. Autem,
+      eos ratione saepe nesciunt assumenda non necessitatibus deserunt quae ex,
+      ipsum explicabo voluptatibus velit recusandae ut nostrum numquam. Sint
+      earum dolor perferendis accusamus ducimus iure sit, autem explicabo
+      labore, nihil soluta nam ipsum atque iusto illo quam aperiam mollitia
+      quaerat laudantium expedita quia consectetur animi tempora laborum! Unde
+      est ea exercitationem assumenda sunt, quibusdam explicabo molestias quidem
+      fugit impedit ipsam asperiores ullam! Tenetur asperiores explicabo
+      inventore voluptate qui nobis veniam officiis praesentium voluptatibus
+      molestiae! Tenetur dolores, cum suscipit cumque, minus aperiam illum nam
+      odio nemo, asperiores dicta! Fuga at odit aspernatur expedita laboriosam
+      quos maxime optio vel, repudiandae dignissimos quod ipsam sint minus
+      inventore enim quis blanditiis perspiciatis alias veritatis non molestias
+      quo similique. Dignissimos dolorem molestiae tempore illo, eius quam quos
+      officiis eos, provident perferendis quia aspernatur blanditiis officia nam
+      itaque unde impedit autem adipisci. Porro blanditiis itaque ipsa minus
+      suscipit iusto obcaecati maxime numquam reprehenderit ab. Repudiandae
+      magnam velit quos quasi sunt suscipit temporibus nemo nulla sapiente
+      recusandae consequatur cumque molestias, magni, itaque, delectus labore
+      mollitia consectetur. Optio ipsa magnam porro mollitia velit eveniet!
+      Ratione vitae libero aspernatur molestiae excepturi natus, eligendi
+      voluptate iste repudiandae est neque exercitationem voluptatem suscipit
+      quaerat tempora explicabo deleniti recusandae cupiditate nisi provident
+      sint! Quod unde at aspernatur voluptate blanditiis porro atque neque fuga
+      voluptatem modi deserunt ipsam, alias necessitatibus magnam earum
+      consequuntur natus impedit harum accusantium itaque nam. Nostrum assumenda
+      dolore, temporibus recusandae laudantium obcaecati?
+    </div>
+  </body>
+</html>
